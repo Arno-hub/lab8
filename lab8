@@ -1,0 +1,82 @@
+Question 1
+
+On copie les fihcier .c et .h des fonctions max et min dans le répertoire lab8
+
+
+Question2
+
+Pour générer la compilation des deux fichiers sans faire l'éditions des liens on utilise la commande --> gcc -Wall -c max.c / gcc -Wall -c min.c
+
+Question 3
+
+Pour créer la bibliothèque liboutils.a et y mettre les fichiers objtets min et max --> On tape la commande ar -cr liboutils.a min.o max.o
+
+Question 4
+
+Pour vérifier les fichiers contenus dans l'archive liboutils.a, on effectue la commande --> ar -t liboutils.a 
+
+Question 5
+
+Pour générer un index pour l'archive --> on utlise la commande ranlib liboutils.a
+Cette commande permet de générer un index des sources présentent dans une bibliothèque statique et de lier cet index à l'intérieur de la bibliothèque. L index permet en outre d accélérer la phase d édition des liens.
+
+Question 6
+
+Création du fichier main 
+
+Question 7
+
+Création de deux répertoires include et lib dans le répertoire opt/ ( a faire en temps qu'administrateur ) 
+
+Question 8
+
+On déplace avec la commande mv les fichiers max.h et min.h dans include et liboutils.a dans lib 
+
+Question 9
+
+Afin de compiler le fichier main en faisant appel à la biliothèque liboutils créée --> on execute la commande suivante --> gcc main.c -L/opt/lib -I/opt/include -loutils -o toto.exe
+
+Question 10 
+
+Après execution du programme, on obtient la sortie suivante -->
+ La valeur maximale présente dans le tableau est : 19 
+ La valeur minimale présente dans le tableau est : 1 
+
+Question 11
+On compile le fichier var.c en utilisant la commande gcc -Wall -c var.c 
+
+Question 12 
+On vérifie la présence du fichier var.o dans la bibliothèque liboutils.a en utilisant la commande --> ar -t liboutils.a 
+
+Question 13 
+
+Comme précedemment, pour mettre à jour l'index on utilise la commande --> ranlib liboutils.a 
+Pour rendre compte de la présence des fichiers objets, ainsi que de leur valeur symbole, de leur type et de leur nom. On utilise la commande nm --> nm liboutils.a 
+On obtient l'affichage suivant : 
+max.o:
+0000000000000000 T max
+
+min.o:
+0000000000000000 T min
+
+var.o:
+0000000000000000 T variance
+
+Question 14
+On compile le programme via la commande --> gcc main.c -L/opt/lib -I/opt/include -loutils -o main.exe
+On l'execute via la commande --> ./main.exe
+On obtient le résultat suivant --> 
+La valeur maximale présente dans le tableau est : 19 
+ La valeur minimale présente dans le tableau est : 1 
+ La valeur de la variance de ce tableau est : 34.816326 
+
+Question 15
+On cherche désormais à arrondir la valeur de la variance. 
+Pour cela on utilise les fonctions ceil et floor de la bibliothèque "math" 
+Après avoir inclut cette bibliothèque dans la fonction main.c et codé les conditions pour arrondir la valeur de la variance
+On compile le code la façon suivante, en ajoutant -lm avant le -o pour inclure la biliothèque "math.h" --> gcc main.c -L/opt/lib -I/opt/include -loutils -lm -o main.exe
+On obtient le résultat suivant -->
+La valeur maximale présente dans le tableau est : 19 
+ La valeur minimale présente dans le tableau est : 1 
+ La valeur de la variance de ce tableau est : 35.000000 
+  
