@@ -2,7 +2,6 @@ Question 1
 
 On copie les fihcier .c et .h des fonctions max et min dans le répertoire lab8
 
-
 Question2
 
 Pour générer la compilation des deux fichiers sans faire l'éditions des liens on utilise la commande --> gcc -Wall -c max.c / gcc -Wall -c min.c
@@ -18,11 +17,12 @@ Pour vérifier les fichiers contenus dans l'archive liboutils.a, on effectue la 
 Question 5
 
 Pour générer un index pour l'archive --> on utlise la commande ranlib liboutils.a
-Cette commande permet de générer un index des sources présentent dans une bibliothèque statique et de lier cet index à l'intérieur de la bibliothèque. L index permet en outre d accélérer la phase d édition des liens.
+Cette commande permet de générer un index des sources présentent dans une bibliothèque statique et de lier cet index à l'intérieur de la bibliothèque. 
+L'index permet en outre d accélérer la phase d édition des liens.
 
 Question 6
 
-Création du fichier main 
+Création du fichier main.
 
 Question 7
 
@@ -39,11 +39,11 @@ Afin de compiler le fichier main en faisant appel à la biliothèque liboutils c
 Question 10 
 
 Après execution du programme, on obtient la sortie suivante -->
- La valeur maximale présente dans le tableau est : 19 
- La valeur minimale présente dans le tableau est : 1 
+La valeur maximale présente dans le tableau est : 19 
+La valeur minimale présente dans le tableau est : 1 
 
 Question 11
-On compile le fichier var.c en utilisant la commande gcc -Wall -c var.c 
+On compile le fichier var.c en utilisant la commande gcc -Wall -c var.c et on rajoute le .O correspondant dans la bibliothèque liboutils.
 
 Question 12 
 On vérifie la présence du fichier var.o dans la bibliothèque liboutils.a en utilisant la commande --> ar -t liboutils.a 
@@ -67,8 +67,8 @@ On compile le programme via la commande --> gcc main.c -L/opt/lib -I/opt/include
 On l'execute via la commande --> ./main.exe
 On obtient le résultat suivant --> 
 La valeur maximale présente dans le tableau est : 19 
- La valeur minimale présente dans le tableau est : 1 
- La valeur de la variance de ce tableau est : 34.816326 
+La valeur minimale présente dans le tableau est : 1 
+La valeur de la variance de ce tableau est : 34.816326 
 
 Question 15
 On cherche désormais à arrondir la valeur de la variance. 
@@ -77,6 +77,6 @@ Après avoir inclut cette bibliothèque dans la fonction main.c et codé les con
 On compile le code la façon suivante, en ajoutant -lm avant le -o pour inclure la biliothèque "math.h" --> gcc main.c -L/opt/lib -I/opt/include -loutils -lm -o main.exe
 On obtient le résultat suivant -->
 La valeur maximale présente dans le tableau est : 19 
- La valeur minimale présente dans le tableau est : 1 
- La valeur de la variance de ce tableau est : 35.000000 
+La valeur minimale présente dans le tableau est : 1 
+La valeur de la variance de ce tableau est : 35.000000 
   
