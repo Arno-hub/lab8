@@ -70,7 +70,7 @@ La valeur maximale présente dans le tableau est : 19
 La valeur minimale présente dans le tableau est : 1 
 La valeur de la variance de ce tableau est : 34.816326 
 
-Question 15
+Question 15/16
 On cherche désormais à arrondir la valeur de la variance. 
 Pour cela on utilise les fonctions ceil et floor de la bibliothèque "math" 
 Après avoir inclut cette bibliothèque dans la fonction main.c et codé les conditions pour arrondir la valeur de la variance
